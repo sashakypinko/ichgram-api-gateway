@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "dev": "nodemon",
-    "prod": "nodemon ./dist",
+    "prod": "node ./dist",
     "build": "npx tsc"
   },
   "dependencies": {
