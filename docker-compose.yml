@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build:
+      context: .
+    ports:
+      - "4000:4000"
+    networks:
+      - ichgram-network
+
+networks:
+  ichgram-network:
+    driver: bridge
+    external: true
