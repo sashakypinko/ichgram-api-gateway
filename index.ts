@@ -32,7 +32,7 @@ app.addHook('onRequest', async (request: FastifyRequest) => {
 });
 
 app.register(fastifyHttpProxy, {
-  upstream: process.env.AUTH_SERVICE_URL || 'http://localhost:3001',
+  upstream: process.env.AUTH_SERVICE_URL || 'http://localhost:3002',
   prefix: '/auth',
   http2: false,
 });

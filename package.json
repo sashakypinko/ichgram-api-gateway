@@ -4,7 +4,9 @@
   "description": "Api gateway for ichgram",
   "main": "index.ts",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "prod": "nodemon ./dist",
+    "build": "npx tsc"
   },
   "dependencies": {
     "@fastify/cors": "^10.0.1",
