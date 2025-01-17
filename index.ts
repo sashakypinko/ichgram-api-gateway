@@ -6,6 +6,8 @@ import {JwtPayload} from './types';
 import 'dotenv/config';
 
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+const host = process.env.HOST || 'localhost';
+
 const app = fastify({logger: true});
 
 app.register(fastifyJwt, {
@@ -50,7 +52,7 @@ app.register(fastifyHttpProxy, {
   http2: false,
 });
 
-app.listen({port}, (err, address) => {
+app.listen({port, host}, (err, address) => {
   if (err) {
     console.error(err);
     process.exit(1);
