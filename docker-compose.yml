@@ -12,7 +12,7 @@ services:
     env_file:
       - .env
     ports:
-      - "80:3000"
+      - "3000:3000"
     networks:
       - ichgram-network
 
