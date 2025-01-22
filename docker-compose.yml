@@ -4,8 +4,15 @@ services:
   api-gateway:
     build:
       context: .
+    environment:
+      PORT: 3000
+      AUTH_SERVICE_URL: ${AUTH_SERVICE_URL}
+      CORE_SERVICE_URL: ${CORE_SERVICE_URL}
+      MEDIA_SERVICE_URL: ${MEDIA_SERVICE_URL}
+    env_file:
+      - .env
     ports:
-      - "4000:4000"
+      - "80:3000"
     networks:
       - ichgram-network
 
